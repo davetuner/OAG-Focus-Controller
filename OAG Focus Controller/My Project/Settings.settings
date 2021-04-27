@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="EFW" Type="System.String" Scope="User">
-      <Value Profile="(Default)">&lt;- Choose EFW</Value>
+      <Value Profile="(Default)">&lt;- Choose Filterwheel</Value>
     </Setting>
     <Setting Name="Focuser" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;- Choose OAG Focuser</Value>
@@ -71,11 +71,14 @@
     <Setting Name="RadioOffsetChecked" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="FocusStepSize" Type="System.String" Scope="User">
-      <Value Profile="(Default)">30</Value>
+    <Setting Name="FocusSlowSteps" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="FocusFineStepSize" Type="System.String" Scope="User">
+    <Setting Name="FocusMediumSteps" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="FocusFastSteps" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

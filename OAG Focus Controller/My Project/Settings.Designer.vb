@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("<- Choose EFW")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("<- Choose Filterwheel")>  _
         Public Property EFW() As String
             Get
                 Return CType(Me("EFW"),String)
@@ -332,25 +332,37 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("30")>  _
-        Public Property FocusStepSize() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property FocusSlowSteps() As Integer
             Get
-                Return CType(Me("FocusStepSize"),String)
+                Return CType(Me("FocusSlowSteps"),Integer)
             End Get
             Set
-                Me("FocusStepSize") = value
+                Me("FocusSlowSteps") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
-        Public Property FocusFineStepSize() As String
+        Public Property FocusMediumSteps() As Integer
             Get
-                Return CType(Me("FocusFineStepSize"),String)
+                Return CType(Me("FocusMediumSteps"),Integer)
             End Get
             Set
-                Me("FocusFineStepSize") = value
+                Me("FocusMediumSteps") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property FocusFastSteps() As Integer
+            Get
+                Return CType(Me("FocusFastSteps"),Integer)
+            End Get
+            Set
+                Me("FocusFastSteps") = value
             End Set
         End Property
     End Class
